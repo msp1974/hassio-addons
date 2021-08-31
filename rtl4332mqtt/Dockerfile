@@ -35,7 +35,7 @@ RUN \
     set -o pipefail \
     \
     && apk add --no-cache --virtual .build-dependencies \
-        tar=1.34-r0 \
+        tar \
     \
     && apk add --no-cache \
         libcrypto1.1=1.1.1l-r0 \
