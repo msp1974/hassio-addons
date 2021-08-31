@@ -18,7 +18,7 @@ LABEL Description="This image is used to start a script that will monitor for RF
 # First install software packages needed to compile rtl_433 and to publish MQTT events
 #
 RUN apk add --no-cache mosquitto-clients jq
-COPY /config/rtl4332mqtt/rtl2mqtt.sh /rtl2mqtt.sh
+COPY rtl2mqtt.sh /rtl2mqtt.sh
 CMD chmod +x /rtl2mqtt.sh
 #
 # Define an environment variable
