@@ -24,7 +24,7 @@ ENV \
     TERM="xterm-256color"
 
 # Copy root filesystem
-COPY rootfs /
+#COPY rootfs /
 
 # Set shell
 SHELL ["/bin/ash", "-o", "pipefail", "-c"]
