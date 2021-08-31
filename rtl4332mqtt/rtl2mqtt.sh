@@ -187,7 +187,8 @@ echo "------------------------------------"
 
 set -x  ## uncomment for MQTT logging...
 
-/usr/local/bin/rtl_433 -F json -R $PROTOCOL -f $FREQUENCY -g $GAIN -p $OFFSET | while read line
+#/usr/local/bin/rtl_433 -F json -R $PROTOCOL -f $FREQUENCY -g $GAIN -p $OFFSET | while read line
+/usr/local/bin/rtl_433 -F json | while read line
 do
   DEVICE="$(echo $line | jq --raw-output '.model' | tr -s ' ' '_')" # replace ' ' with '_'
   DEVICEID="$(echo $line | jq --raw-output '.id' | tr -s ' ' '_')"
