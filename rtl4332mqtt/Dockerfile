@@ -21,7 +21,7 @@ ENV \
     PS1="$(whoami)@$(hostname):$(pwd)$ " \
     TERM="xterm-256color"
 
-    
+RUN apk add --no-cache mosquitto-clients jq  
 ADD rtl2mqtt.sh /rtl2mqtt.sh
 RUN chmod +x /rtl2mqtt.sh
 #
