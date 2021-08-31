@@ -19,7 +19,7 @@ LABEL Description="This image is used to start a script that will monitor for RF
 #
 RUN apk add --no-cache mosquitto-clients jq
 COPY rtl2mqtt.sh /rtl2mqtt.sh
-CMD chmod +x /rtl2mqtt.sh
+RUN ["chmod +x /rtl2mqtt.sh"]
 #
 # Define an environment variable
 #
