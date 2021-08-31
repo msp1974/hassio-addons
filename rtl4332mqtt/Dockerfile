@@ -19,7 +19,7 @@ LABEL Description="This image is used to start a script that will monitor for RF
 #
 RUN apk add --no-cache mosquitto-clients jq
 COPY rtl2mqtt.sh /rtl2mqtt.sh
-RUN ["chmod +x /rtl2mqtt.sh"]
+#CMD ["chmod +x /rtl2mqtt.sh"]
 #
 # Define an environment variable
 #
@@ -29,5 +29,6 @@ ENV MQTT_USER="guest"
 ENV MQTT_PASS="guest"
 ENV MQTT_TOPIC="homeassistant/sensor/rtl433"
 
+CMD cd / && cp rtl2mqtt.sh /rtl2mqtt.sh && chmod +x /rtl2mqtt.sh
 #CMD cd / && cp /config/rtl4332mqtt/rtl2mqtt.sh /rtl2mqtt.sh && chmod +x /rtl2mqtt.sh && /rtl2mqtt.sh
 ENTRYPOINT ["/rtl2mqtt.sh"]
