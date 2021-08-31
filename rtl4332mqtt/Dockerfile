@@ -31,4 +31,4 @@ ENV MQTT_TOPIC="homeassistant/sensor/rtl433"
 
 CMD cd / && cp rtl2mqtt.sh /rtl2mqtt.sh && chmod +x /rtl2mqtt.sh
 #CMD cd / && cp /config/rtl4332mqtt/rtl2mqtt.sh /rtl2mqtt.sh && chmod +x /rtl2mqtt.sh && /rtl2mqtt.sh
-ENTRYPOINT ["/rtl2mqtt.sh"]
+ENTRYPOINT ["rtl2mqtt.sh"]
