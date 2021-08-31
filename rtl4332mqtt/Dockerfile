@@ -5,8 +5,8 @@
 
 # IMPORTANT: The container needs privileged access to /dev/bus/usb on the host.
 
-ARG BUILD_FROM
-FROM $BUILD_FROM
+ARG BUILD_FROM=alpine:3.12
+FROM ${BUILD_FROM}
 
 ENV LANG C.UTF-8
 
